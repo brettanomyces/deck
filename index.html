@@ -71,7 +71,7 @@ railing(groups.deck,[left+.04,.05],[left+.04,3.47]);railing(groups.deck,[right-.
 for(const [x,z]of [[left+.07,.08],[left+.07,1.75],[left+.07,3.43],[split-.07,3.43],[right-.04,.08],[right-.04,start]])box(groups.deck,'Guard post',x,2.92,z,.09,1.15,.09,'timber');
 // Landing enlarged to 1.25m for door sweep; flight now ends 4.00m from house.
 for(let i=0;i<11;i++){const z=start+(i+.5)*.25,y=H-(i+1)*.2;box(groups.stairs,'Tread '+(i+1),1.825,y-.025,z,.8,.05,.25,'board');box(groups.stairs,'Riser '+(i+1),1.825,y+.075,start+i*.25,.8,.15,.025,'timber');}
-for(const x of [1.43,2.22]){bar(groups.stairs,'Stair stringer',[x,2.10,start],[x,-.10,start+run],.065,.22,'timber');bar(groups.stairs,'Stair handrail',[x,3.36,start],[x,1.16,start+run],.055,.055,'timber');for(let i=0;i<=24;i++){const z=start+i*run/24,y=2.4-(z-start)*.8;bar(groups.stairs,'Stair baluster',[x,y-.1,z],[x,y+.96,z],.018,.018,'metal');}}
+for(const x of [1.43,2.22]){bar(groups.stairs,'Stair stringer',[x,2.165,start],[x,-.035,start+run],.065,.22,'timber');bar(groups.stairs,'Stair handrail',[x,3.36,start],[x,1.16,start+run],.055,.055,'timber');for(let i=0;i<=24;i++){const z=start+i*run/24,y=2.4-(z-start)*.8;bar(groups.stairs,'Stair baluster',[x,y-.1,z],[x,y+.96,z],.018,.018,'metal');}}
 box(groups.stairs,'Lawn landing 0.85m nominal',1.825,-.04,start+run+.44,.85,.08,.88,'concrete');
 box(groups.site,'Flat lawn reference',0,-.14,5,4.8,.2,2.1,'grass');
 // Concept retaining sides: omitted existing terrain cannot be reconstructed from photographs.
@@ -109,6 +109,23 @@ render();}
 function rebuild(){const depth=+q('deck-depth').value;clear(groups.structure);clear(groups.patio);box(groups.patio,'Patio surface; excavation depth illustrative',0,-depth-.075,1.75,4.5,.15,3.5,'concrete');
 for(const z of [.14,3.36])box(groups.structure,'Indicative support beam; underside 2.05m',-.425,2.14,z,3.65,.18,.16,'timber');
 for(const x of [-2.12,1.27])for(const z of [.14,3.36])box(groups.structure,'Indicative post',x,(2.05-depth)/2,z,.14,2.05+depth,.14,'timber');
+// Illustrative independent landing supports; all member sizes and footings require design.
+box(groups.structure,'Landing rear beam extension',1.825,2.14,.14,.85,.18,.16,'timber');
+box(groups.structure,'Stair head beam; connections to be designed',1.825,2.211,start-.08,.85,.322,.16,'timber');
+for(const x of [1.45,1.825,2.20])box(groups.structure,'Landing joist',x,2.262,.655,.05,.22,.87,'timber');
+for(const [x,z]of [[2.18,.14],[1.47,start-.08],[2.18,start-.08]]){
+ box(groups.structure,'Landing support post',x,(2.05-depth+.08)/2,z,.14,2.05+depth-.08,.14,'timber');
+ box(groups.structure,'Landing post shoe; schematic',x,-depth+.05,z,.18,.10,.18,'metal');
+ box(groups.structure,'Landing foundation placeholder; size and depth unverified',x,-depth-.15,z,.32,.30,.32,'concrete');
+}
+bar(groups.structure,'Landing outer knee brace rear',[2.18,1.60,.14],[2.18,2.05,.56],.075,.075,'timber');
+bar(groups.structure,'Landing outer knee brace front',[2.18,1.60,start-.08],[2.18,2.05,.75],.075,.075,'timber');
+bar(groups.structure,'Landing transverse knee brace',[1.47,1.68,start-.08],[1.80,2.05,start-.08],.075,.075,'timber');
+for(const x of [1.43,2.22]){
+ box(groups.structure,'Stair head connector placeholder',x,2.165,start,.085,.20,.07,'metal');
+ box(groups.structure,'Stair foot shoe placeholder',x,-.015,start+run-.05,.095,.16,.16,'metal');
+}
+box(groups.structure,'Stair bottom foundation placeholder; independent of patio depth',1.825,-.25,start+run-.05,.85,.40,.40,'concrete');
 for(const x of [-2.31,2.31])box(groups.patio,'Retaining side placeholder; design required',x,.5-depth/2,1.75,.12,1+depth,3.5,'stone');
 if(depth>.001)for(let i=0;i<Math.ceil(depth/.2);i++){const n=Math.ceil(depth/.2),rise=depth/n;box(groups.patio,'Patio access step',.9,-(i+.5)*rise,3.65-i*.25,.7,rise,.25,'concrete');}
 office.position.y=1.2-depth;

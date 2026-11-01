@@ -30,6 +30,16 @@ Table 1.00m diameter, 0.76m total height. Chairs 0.50 x0.50m, seats 0.45m high.
 Two chairs default; four-chair arrangement lacks front pull-out clearance.
 GLB default uses closed doors and two chairs.
 
+STAIR SUPPORT UPDATE
+Drain is on the left, as reported by owner; exact route and depth are not surveyed.
+Right landing has a rear beam extension, three joists, a stair head beam and three additional posts.
+Knee braces, post shoes, foundation placeholders and stair-end connector placeholders show a possible load path.
+Bottom stair support stays at lawn level when the patio is lowered.
+All new member sizes, footing dimensions, joints, bracing and stair spans require engineer design; no capacity is implied.
+Local landing braces and posts reduce usable space near the stair side; the office envelope is not a collision check.
+The main deck depth remains the original illustrative 0.35m; no steel alternative has been sized or modelled.
+
 GITHUB PAGES
-Publish the main branch root in repository Settings > Pages.
+Live demo: https://brettanomyces.github.io/deck/
+GitHub Pages publishes the main branch root.
 The .nojekyll file serves this site directly without a Jekyll build.
