@@ -1,0 +1,35 @@
+SOUTHERNHAY DECK CONCEPT - 1 November 2026
+
+Open index.html in a browser; it works offline.
+Drag to orbit, scroll to zoom, or use view and rotation controls.
+Import southernhay-deck-concept.glb in a glTF-compatible 3D application. Units: metres, Y up.
+
+USER MEASUREMENTS
+Existing deck 4.50m wide, 2.50m deep; proposed projection 3.50m.
+Centered glazing 3.50m wide. Deck-to-lawn drop approximately 2.40m.
+Stairs right looking towards house. Existing small retaining wall omitted in proposal.
+
+ASSUMPTIONS
+Nominal 0.85m stair strip within 4.50m total width; 0.80m treads.
+12 rises at 0.20m; 11 goings at 0.25m; 1.25m top landing to allow provisional door sweep.
+Stair flight now ends 4.00m from house, 0.50m beyond 3.50m deck; lower landing ends 4.88m from house. Dimensions need structural/detail clearance checks.
+Lowest beam underside assumed 0.35m below deck surface.
+Initial patio surface at lawn reference level. Slider lowers patio only; stair landing stays at lawn.
+Office is a translucent outer volume 3.20m wide x2.60m deep x2.40m high, not a room design.
+Slab, retaining sides, timber members, supports, glazing height and upper house are schematic.
+Side edges use open balustrades approximately 1.10m above deck, matching the front railing, in place of tall privacy screens.
+Existing under-deck ground, sewer, foundations and neighbouring land NOT surveyed/modelled.
+No claim of engineering feasibility, planning approval or Building Regulations compliance.
+GLB is static initial state, office hidden and patio at lawn level.
+
+FURNITURE UPDATE
+Three equal 1.167m door panels, stacking left when looking towards house.
+Folded positions schematic; exact mechanism and leaf sizes unverified.
+1.25m provisional keep-clear strip across glazing.
+Table 1.00m diameter, 0.76m total height. Chairs 0.50 x0.50m, seats 0.45m high.
+Two chairs default; four-chair arrangement lacks front pull-out clearance.
+GLB default uses closed doors and two chairs.
+
+GITHUB PAGES
+Publish the main branch root in repository Settings > Pages.
+The .nojekyll file serves this site directly without a Jekyll build.
